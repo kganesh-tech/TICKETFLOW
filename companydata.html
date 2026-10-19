@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>companyData</title>
+        <link rel ="stylesheet" href="company.css">
+    </head>
+
+    <body>
+        <div class="logo">
+            <h1 id="logo">TEAMTASK</h1>
+        </div>
+        <div class="container">
+            <section class="hero-img">
+                
+            </section>
+            <h1>COMPANY EMPLOYEE DATABASE</h1>
+            <form id="singupform">
+                <label > username :</label>
+                <input type="text" id = "username" placeholder="username">
+                <label > email :</label>
+                <input type="email" id = "email" placeholder="email">
+                <label > password :</label>
+                <input type="password" id = "password" placeholder="username">
+                <label for="roles"> Role :</label>
+                <select id="roles" name="role" required>
+                    <option value="" disabled selected>Select role</option>
+                    <option value="DEVELOPER">Developer</option>
+                    <option value="MANAGER">Manager</option>
+
+                </select>
+
+                <button class="submit" id="createaccount">CREATE ACCOUNT</button>
+
+            </form> 
+
+            
+        </div>
+        <script src="companydata.js"></script>
+    </body>
+</html>

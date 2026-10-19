@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TicketFlow</title>
+
+    <link rel="stylesheet" href="customer.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <h1 id="logo">TICKETFLOW</h1>
+
+            <nav class="sidebar-items">
+
+                <a href="#" id="overviewLink" class="nav-link">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Overview</span>
+                </a>
+
+                <a href="#" id="ticketsLink" class="nav-link">
+                    <i data-lucide="ticket"></i>
+                    <span>My Tickets</span>
+                </a>
+
+
+                <a href="#" id="messagesLink" class="nav-link">
+                    <i data-lucide="message-square"></i>
+                    <span>Messages</span>
+                </a>
+
+                <a href="#" id="notificationsLink" class="nav-link">
+                    <i data-lucide="bell"></i>
+                    <span>Notifications</span>
+                </a>
+
+                <a href="#" id="helpCenterLink" class="nav-link">
+                    <i data-lucide="circle-help"></i>
+                    <span>Help Center</span>
+                </a>
+
+                <div class="bottom">
+
+                    <a href="#" id="settingsLink" class="nav-link">
+                        <i data-lucide="settings"></i>
+                        <span>Settings</span>
+                    </a>
+
+                    <div class="profile">
+                        <div class="profile-icon">
+                            <i data-lucide="user"></i>
+                        </div>
+
+                        <span id="username">USERNAME     ></span>
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </aside>
+
+        <header class="navbar-items">
+
+            <div class="customer-info">
+
+                <div class="customer-field">
+                    <span>CUSTOMER ID</span>
+                    <input type="text" id="userId" readonly>
+                </div>
+
+                <div class="customer-field">
+                    <span>EMAIL</span>
+                    <input type="email" id="email" readonly>
+                </div>
+
+            </div>
+
+        </header>
+       
+        <main class="main-content" id="mainContent">
+
+            <section class="card">
+
+                <p>
+                    Good evening
+                    <span id="welcomeUsername">USERNAME</span>
+                </p>
+
+                <p>
+                    Here's what's happening with your support requests
+                </p>
+
+            </section>
+
+         <button class="createticketbutton" id="createTicket">
+            <i data-lucide="plus-circle"></i>
+            Create Ticket
+         </button>
+
+         <section class="container-card">
+            <h1>Your Requests</h1>
+            <p>Here's a quick summary of your tickets</p>
+
+            <div class="card">
+                <p>open</p>
+                <p id="opencount">0</p>
+            </div>
+            <div class="card">
+                <p>In Progress</p>
+                <p id="inprogresscount">0</p>
+            </div>
+            <div class="card">
+                <p>Resolved</p>
+                <p id="resolvedcount">0</p>
+            </div>
+            
+
+         </section>
+
+         <section class="card-container">
+            <h1>Recent Activity</h1>
+            <p>Latest updates on your support requests</p>
+             <p>View all</p>
+
+             <div class="ticket-header">
+                <span>Ticket details</span>
+                <span>Ticket handled by</span>
+                <span>Status</span>
+             </div>
+             <div class="ticketcontent" id="ticketscontent">
+
+             </div>
+         </section>
+
+         
+
+        </main>
+        
+
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+<script src="customer.js"></script>
+
+</body>
+
+</html>

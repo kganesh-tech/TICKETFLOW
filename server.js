@@ -24,7 +24,9 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
-
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+});
 const client = new MongoClient(process.env.MONGODB_URI);
 
 let users;

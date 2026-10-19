@@ -24,7 +24,7 @@ form.addEventListener("submit" , function(event) {
         return;
     };
 
-    fetch(`http://localhost:3000/changepassword/${username}` , {
+    fetch(`https://ticketflow-backend-846m.onrender.com/changepassword/${username}` , {
         method : "POST",
         headers : {
             "Content-Type" : "application/json"

@@ -122,7 +122,7 @@ Tickets.addEventListener("click", function(event) {
 
     });
 
-    fetch("http://localhost:3000/alltickets", {
+    fetch("https://ticketflow-backend-846m.onrender.com/alltickets", {
 
         method: "GET",
 
@@ -192,7 +192,7 @@ Tickets.addEventListener("click", function(event) {
                     );
 
                     fetch(
-                        "http://localhost:3000/claimedticket",
+                        "https://ticketflow-backend-846m.onrender.com/claimedticket",
                         {
                             method: "POST",
 
@@ -292,7 +292,7 @@ claimedtickets.addEventListener(
         );
 
         fetch(
-            "http://localhost:3000/ticketsclaimed",
+            "https://ticketflow-backend-846m.onrender.com/ticketsclaimed",
             {
                 method: "GET",
 
@@ -435,7 +435,7 @@ claimedtickets.addEventListener(
                             localStorage.getItem("token");
 
                         fetch(
-                            `http://localhost:3000/solved/${ticketId}`,
+                            `https://ticketflow-backend-846m.onrender.com/solved/${ticketId}`,
                             {
                                 method: "POST",
 
@@ -514,7 +514,7 @@ claimedtickets.addEventListener(
                         ticketDetails.innerHTML = "";
 
                         fetch(
-                            "http://localhost:3000/tickets",
+                            "https://ticketflow-backend-846m.onrender.com/tickets",
                             {
                                 method: "GET",
 
@@ -622,7 +622,7 @@ claimedtickets.addEventListener(
                                     );
 
                                     fetch(
-                                        `http://localhost:3000/working/${ticketId}`,
+                                        `https://ticketflow-backend-846m.onrender.com/working/${ticketId}`,
                                         {
                                             method: "POST",
 
@@ -929,7 +929,7 @@ claimedtickets.addEventListener(
                                           const token = localStorage.getItem("token");
                                           console.log("DEVELOPER SOCKET TOKEN SENT:" , token);
                                     messageInput.focus();
-                                   const socket = io("http://localhost:3000" , {
+                                   const socket = io("https://ticketflow-backend-846m.onrender.com" , {
                                     auth : {
                                         token : token
                                     }
@@ -958,7 +958,7 @@ claimedtickets.addEventListener(
                                    const ticketId = ticket.ticketid;
                                    console.log("TICKETID FROM THE DEVELOPER REQUEST:" , ticketId);
 
-                                   fetch(`http://localhost:3000/messages/developer/${ticketId}` , {
+                                   fetch(`https://ticketflow-backend-846m.onrender.com/messages/developer/${ticketId}` , {
                                     method : "GET",
                                     headers : {
                                         "Authorization" : `Bearer ${token}`

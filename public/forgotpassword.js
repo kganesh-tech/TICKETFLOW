@@ -28,7 +28,7 @@ Changepassword.addEventListener("click" , function(event) {
         Passworderror.textContent = "Passwords donot Match";
     }
 
-    fetch("http://localhost:3000/forgotpassword" , {
+    fetch("https://ticketflow-backend-846m.onrender.com/forgotpassword" , {
         method : "POST" , 
         headers : {
             "Content-Type" : "application/json"

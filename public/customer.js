@@ -380,7 +380,7 @@ createticket.addEventListener("click", function(event) {
 
 
             fetch(
-                `http://localhost:3000/tickets/${userid}`,
+                `https://ticketflow-backend-846m.onrender.com/tickets/${userid}`,
                 {
 
                     method: "POST",
@@ -495,7 +495,7 @@ createticket.addEventListener("click", function(event) {
 
 
 fetch(
-    "http://localhost:3000/customerdata",
+    "https://ticketflow-backend-846m.onrender.com/customerdata",
     {
 
         method: "GET",
@@ -535,7 +535,7 @@ fetch(
 
 
 fetch(
-    "http://localhost:3000/customertickets",
+    "https://ticketflow-backend-846m.onrender.com/customertickets",
     {
 
         method: "GET",
@@ -664,7 +664,7 @@ fetch(
 
 
    fetch(
-    "http://localhost:3000/updatedtickets",
+    "https://ticketflow-backend-846m.onrender.com/updatedtickets",
     {
 
         method: "GET",
@@ -826,7 +826,7 @@ mytickets.addEventListener("click", function() {
 
     console.log("MY TICKETS TOKEN:", TOKEN);
 
-    fetch("http://localhost:3000/mytickets", {
+    fetch("https://ticketflow-backend-846m.onrender.com/mytickets", {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${TOKEN}`
@@ -969,7 +969,7 @@ mytickets.addEventListener("click", function() {
 
         const TOKEN = localStorage.getItem("token");
 
-        fetch("http://localhost:3000/myticketsclaimed", {
+        fetch("https://ticketflow-backend-846m.onrender.com/myticketsclaimed", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${TOKEN}`
@@ -1115,7 +1115,7 @@ const messages = document.getElementById("messagesLink");
 lucide.createIcons();
  const TOKEN = localStorage.getItem("token");
  console.log("SOCKET tOKEN RECEIVED:" , TOKEN);
-const socket = io("http://localhost:3000"  , {
+const socket = io("https://ticketflow-backend-846m.onrender.com"  , {
     auth: {
         token: TOKEN
     }
@@ -1145,7 +1145,7 @@ socket.on("received_message" , function(data) {
 const Token = localStorage.getItem("token");
  const ticketid = claimedTicket.ticketid;
   console.log("FETCHING THE MESSAGES TOKEN:" , ticketid)
- fetch(`http://localhost:3000/messages/${ticketid}` , {
+ fetch(`https://ticketflow-backend-846m.onrender.com/messages/${ticketid}` , {
     method : "GET" , 
     headers : {
         "Authorization" : `Bearer ${Token}`
@@ -1250,7 +1250,7 @@ notification.addEventListener("click", function (event) {
    const TOKEN = localStorage.getItem("token");
      console.log("TOKEN FOR THE NOTIFICATION:" , TOKEN);
      
-    fetch("http://localhost:3000/notification" , {
+    fetch("https://ticketflow-backend-846m.onrender.com/notification" , {
         method : "POST",
         headers : {
             "Authorization" : `Bearer ${TOKEN}`

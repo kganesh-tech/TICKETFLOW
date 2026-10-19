@@ -123,7 +123,7 @@ loginButton.addEventListener("click", function(event) {
         };
         console.log("LOGINDETAILS:" , logininfo);
 
-       fetch("http://localhost:3000/login/users", {
+       fetch("https://ticketflow-backend-846m.onrender.com/login/users", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
@@ -373,7 +373,7 @@ signupButton.addEventListener("click", function(event) {
         try {
 
             const response =
-                await fetch("http://localhost:3000/signup/users", {
+                await fetch("https://ticketflow-backend-846m.onrender.com/signup/users", {
                     method: "POST",
 
                     headers: {
